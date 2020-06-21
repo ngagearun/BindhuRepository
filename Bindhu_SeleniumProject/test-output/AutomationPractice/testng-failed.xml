@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AutomationPractice]" parallel="none">
+  <parameter name="browsername" value="chrome"/>
+  <listeners>
+    <listener class-name="com.testng.TestListener"/>
+  </listeners>
+  <test name="ChromeBrowser(failed)" parallel="none">
+    <parameter name="browsername" value="chrome"/>
+    <groups>
+      <run>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.testng.Dresses">
+        <methods>
+          <include name="movetoDressespage"/>
+          <include name="addEveningDressesthroughMore"/>
+        </methods>
+      </class> <!-- com.testng.Dresses -->
+      <class name="com.testng.Women">
+        <methods>
+          <include name="movetoDressespage"/>
+        </methods>
+      </class> <!-- com.testng.Women -->
+      <class name="com.testng.CartSummaryPage">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="launchbrowserwithapp"/>
+        </methods>
+      </class> <!-- com.testng.CartSummaryPage -->
+    </classes>
+  </test> <!-- ChromeBrowser(failed) -->
+</suite> <!-- Failed suite [AutomationPractice] -->

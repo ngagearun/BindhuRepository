@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Mortgagecalculator" >
+<listeners>
+<listener class-name="com.testng.TestListener"></listener>
+
+</listeners>
+	<test name="DataDrivenTesting">
+	<parameter name="browsername" value="chrome" />
+	<groups>
+   <run>
+    <include name="regression"></include>
+   </run>  
+  </groups>
+		<classes>
+			<class name="com.testng.DataProviderinTestNG"></class>
+			
+		</classes>
+	</test>
+	
+	
+	
+</suite>
+
+
